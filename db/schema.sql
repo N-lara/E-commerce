@@ -4,6 +4,7 @@ DROP DATABASE IF EXISTS ecommerce_db;
 -- CREATE DATABASE
 CREATE DATABASE ecommerce_db;
 
+/*
 USE ecommerce_db;
 
 CREATE TABLE Category(
@@ -32,3 +33,4 @@ CREATE TABLE ProductTag(
     FOREIGN KEY (product_id) REFERENCES Product(id),
     FOREIGN KEY (tag_id) REFERENCES Tag(id)
 );
+*/
