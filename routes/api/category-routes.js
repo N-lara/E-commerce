@@ -52,16 +52,20 @@ router.put('/:id', async(req, res) => {
   // update a category by its `id` value
   console.log(`put request to /api/categories/${req.params.id}`);
   try {
-    const updateCategory = await Category.update(req.body, {
+    const updateCategory = await Category.update(
+      {
+        category_name: req.body.category_name,
+      },
+      {
       where: {
         id: req.params.id,
       },
-    });
-    if (!updateCategory[0]) {
+      });
+    if (!updateCategory) {
       res.status(404).json({ message: 'No category with this id!' });
       return;
     }
-    res.status(200).json(updateCategory);
+    res.status(200).json('category '+updateCategory+ ' updated!');
   } catch (err) {
     res.status(500).json(err);
   }

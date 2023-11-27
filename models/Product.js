@@ -9,14 +9,6 @@ class Product extends Model {}
 // set up fields and rules for Product model
 Product.init(
   {
-    // CREATE TABLE Product(
-    //   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    //   category_name VARCHAR(50) NOT NULL,
-    //   price DECIMAL NOT NULL, --HOW TO VALIDATE IF DECIMAL?????
-    //   stock INT NOT NULL DEFAULT(10),  -- HOW TO VALIDATE IF NUMERIC????
-    //   category_id INT, 
-    //   FOREIGN KEY (category_id) REFERENCES Category(id)
-    //   );
     // define columns
     id: {
       type: DataTypes.INTEGER,
@@ -25,10 +17,6 @@ Product.init(
       autoIncrement: true,
     },
     product_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    category_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },

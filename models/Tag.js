@@ -6,10 +6,6 @@ class Tag extends Model {}
 
 Tag.init(
   {
-  //   CREATE TABLE Tag(
-  //     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  //     tag_name VARCHAR(50)
-  // );
     // define columns
     id: {
       type: DataTypes.INTEGER,
